@@ -81,6 +81,9 @@ public class UIObject : System.Object, IPositionable
 		get { return clientTransform.localPosition; }
 		set
 		{
+			if (float.IsNaN(value.x)) {
+				Debug.Log ("#############");
+			}
 			clientTransform.localPosition = value;
 			if( onTransformChanged != null )
 				onTransformChanged();
