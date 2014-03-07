@@ -65,8 +65,9 @@ public class UIRadioButtonGroup : UIAbstractContainer
 			 return _children.Count;
 		}
 	}
-	
-	public UIRadioButtonGroup(int spacing, UILayoutType withLayout = UILayoutType.Vertical) 
+
+	public UIRadioButtonGroup(int spacing):this(spacing,UILayoutType.Vertical){} 
+	public UIRadioButtonGroup(int spacing, UILayoutType withLayout) 
 		: base (withLayout)
 	{
 		_spacing = spacing;
